@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FiveCardDraw.SetupDialog"
+        Title="Five Card Draw — New Game"
+        Width="380" Height="252"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Background="#1E1E1E">
+    <Grid Margin="20,16,20,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Name -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Your name:" Foreground="LightGray" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TxtName" Text="Player" Width="120"
+                 Background="#3C3C3C" Foreground="White" VerticalAlignment="Center"/>
+
+        <!-- Player count -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Number of players (2–4):" Foreground="LightGray" VerticalAlignment="Center"/>
+        <NumericUpDown Grid.Row="1" Grid.Column="1" Name="NudPlayers"
+                       Minimum="2" Maximum="4" Value="3" Width="120"
+                       FormatString="0" VerticalAlignment="Center"/>
+
+        <!-- Starting chips -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Starting chips:" Foreground="LightGray" VerticalAlignment="Center"/>
+        <NumericUpDown Grid.Row="2" Grid.Column="1" Name="NudChips"
+                       Minimum="10" Maximum="10000" Value="100" Increment="10" Width="140"
+                       FormatString="0" VerticalAlignment="Center"/>
+
+        <!-- Cheat mode -->
+        <CheckBox Grid.Row="3" Grid.ColumnSpan="2" Name="ChkCheat"
+                  Content="Cheat mode (see opponent cards)"
+                  Foreground="LightYellow" VerticalAlignment="Center"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal"
+                    HorizontalAlignment="Center" Spacing="16" VerticalAlignment="Center">
+            <Button Name="BtnOK" Content="Deal Me In"
+                    Background="#22783C" Foreground="White" Width="110" Height="32"
+                    Click="BtnOK_Click"/>
+            <Button Name="BtnCancel" Content="Cancel"
+                    Background="#501E1E" Foreground="White" Width="80" Height="32"
+                    Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

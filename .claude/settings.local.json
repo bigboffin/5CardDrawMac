@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDraw/Game/PokerGame.cs /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac/Game/)",
+      "Bash(cp /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDraw/Game/Player.cs /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac/Game/)",
+      "Bash(cp /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDraw/Models/Card.cs /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac/Models/)",
+      "Bash(cp /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDraw/Models/Deck.cs /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac/Models/)",
+      "Bash(cp /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDraw/Models/HandCategory.cs /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac/Models/)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet run *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(git init *)"
+    ]
+  }
+}

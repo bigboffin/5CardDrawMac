@@ -1,0 +1,131 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FiveCardDraw.MainWindow"
+        Title="Five Card Draw"
+        Width="1100" Height="740"
+        MinWidth="900" MinHeight="650"
+        Background="#19592A">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ── Left: main game area ────────────────────────────────────────── -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="155"/>
+                <RowDefinition Height="54"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Row 0: Opponents -->
+            <ScrollViewer Grid.Row="0"
+                          HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Disabled">
+                <StackPanel Name="PnlOpponents" Orientation="Horizontal"
+                            Spacing="8" Margin="8,8,0,0"/>
+            </ScrollViewer>
+
+            <!-- Row 1: Pot / Phase -->
+            <Grid Grid.Row="1" Background="#12461E">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Name="LblPot"
+                           Text="Pot: 0" Foreground="White"
+                           FontSize="18" FontWeight="Bold"
+                           VerticalAlignment="Center" Margin="10,0"/>
+                <TextBlock Grid.Column="1" Name="LblPhase"
+                           Text="" Foreground="White" FontSize="13"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right" Margin="10,0"/>
+            </Grid>
+
+            <!-- Row 2: Human name / chips -->
+            <TextBlock Grid.Row="2" Name="LblHumanInfo"
+                       Text="" Foreground="White"
+                       FontSize="14" FontWeight="Bold"
+                       VerticalAlignment="Center" Margin="10,0"/>
+
+            <!-- Row 3: Human cards -->
+            <ScrollViewer Grid.Row="3"
+                          HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Disabled">
+                <StackPanel Name="PnlHumanCards" Orientation="Horizontal"
+                            Margin="10,4" Spacing="4" VerticalAlignment="Top"/>
+            </ScrollViewer>
+        </Grid>
+
+        <!-- ── Right: action panel ─────────────────────────────────────────── -->
+        <Border Grid.Column="1" Background="#1E1E1E">
+            <DockPanel Margin="8">
+
+                <!-- Top controls (fixed) -->
+                <StackPanel DockPanel.Dock="Top" Spacing="6">
+                    <TextBlock Name="LblToCall" HorizontalAlignment="Center"
+                               Foreground="White" FontSize="13"/>
+
+                    <Grid ColumnDefinitions="*,8,*">
+                        <Button Grid.Column="0" Name="BtnFold" Content="Fold"
+                                Background="#A02828" Foreground="White"
+                                FontWeight="Bold" IsEnabled="False"
+                                HorizontalContentAlignment="Center"/>
+                        <Button Grid.Column="2" Name="BtnCall" Content="Call"
+                                Background="#286490" Foreground="White"
+                                FontWeight="Bold" IsEnabled="False"
+                                HorizontalContentAlignment="Center"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,8,Auto">
+                        <NumericUpDown Grid.Column="0" Name="NudRaise"
+                                       Minimum="1" Maximum="10000" Value="10"
+                                       FormatString="0" IsEnabled="False"/>
+                        <Button Grid.Column="2" Name="BtnRaise" Content="Raise"
+                                Background="#8C5A00" Foreground="White"
+                                FontWeight="Bold" IsEnabled="False" Width="70"
+                                HorizontalContentAlignment="Center"/>
+                    </Grid>
+
+                    <Button Name="BtnDraw" Content="Draw Selected (0)"
+                            Background="#3C7828" Foreground="White"
+                            FontWeight="Bold" IsEnabled="False"
+                            HorizontalContentAlignment="Center"/>
+
+                    <Button Name="BtnNextHand" Content="Next Hand ▶"
+                            Background="#505050" Foreground="White"
+                            FontWeight="Bold" IsEnabled="False"
+                            HorizontalContentAlignment="Center"/>
+
+                    <CheckBox Name="ChkAutoAdvance" Content="Auto advance"
+                              Foreground="Silver"/>
+                    <CheckBox Name="ChkMute" Content="Mute speech"
+                              Foreground="Silver"/>
+                    <CheckBox Name="ChkCheat" Content="Cheat mode"
+                              Foreground="LightYellow"/>
+
+                    <TextBlock Text="Game Log" Foreground="Silver" FontSize="11"
+                               Margin="0,4,0,0"/>
+                </StackPanel>
+
+                <!-- Log fills remaining space -->
+                <Border Background="#141414" CornerRadius="3">
+                    <ScrollViewer Name="LogScroller"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <SelectableTextBlock Name="TbLog"
+                                             Foreground="LightGreen"
+                                             FontFamily="Courier New"
+                                             FontSize="8.5"
+                                             TextWrapping="Wrap"
+                                             Margin="4"/>
+                    </ScrollViewer>
+                </Border>
+
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
