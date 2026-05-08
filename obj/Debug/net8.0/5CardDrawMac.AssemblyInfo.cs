@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("5CardDrawMac")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0941fba1d6d764f7312d22e2c1202da1dff6a8b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("5CardDrawMac")]
 [assembly: System.Reflection.AssemblyTitleAttribute("5CardDrawMac")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
