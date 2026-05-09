@@ -10,7 +10,13 @@
       "Bash(dotnet run *)",
       "Bash(echo \"PID: $!\")",
       "Bash(git init *)",
-      "Bash(git -C /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac remote -v)"
+      "Bash(git -C /Users/tedlemaster/Library/CloudStorage/OneDrive-Personal/Documents/ClaudeCodeHome/Projects/5CardDrawMac remote -v)",
+      "Bash(dotnet new *)",
+      "Bash(dotnet sln *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet test *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
